@@ -1,0 +1,8 @@
+{
+  "proxy": {
+    "/api": {
+      "target": "http://sp.dev.smartstudy.com/",
+      "changeOrigin": true
+    }
+  }
+}
