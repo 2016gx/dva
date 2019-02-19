@@ -6,8 +6,8 @@ import styles from './IndexPage.css';
 function IndexPage() {
   return (
     <div className={styles.normal}>
-      <Link to='/subjects'>智课网科目</Link>
-      <Link to='/examinations'>智课网考试</Link>
+      <Link className={styles.link} to='/subjects'>智课网科目分类</Link>
+      <Link className={styles.link} to='/examinations'>智课网考试分类</Link>
     </div>
   );
 }

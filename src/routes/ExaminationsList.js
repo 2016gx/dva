@@ -3,7 +3,7 @@ import { connect } from 'dva';
 import ExamSpan from '../components/examSpan'
 import Loading from '../components/loading'
 
-class ExaminationList extends React.Component {
+class ExaminationsList extends React.Component {
 
   componentDidMount () {
     const { dispatch } = this.props
@@ -25,7 +25,7 @@ class ExaminationList extends React.Component {
   }
 }
 
-ExaminationList.propTypes = {
+ExaminationsList.propTypes = {
 };
 
 const mapStateToProps = state => {
@@ -35,4 +35,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps)(ExaminationList);
+export default connect(mapStateToProps)(ExaminationsList);

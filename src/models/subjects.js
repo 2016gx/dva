@@ -18,7 +18,7 @@ export default {
 
   effects: {
     *fetch({ payload }, { call, put }) {  // eslint-disable-line
-      const res = yield call(SubjectsService.query)
+      const res = yield call(SubjectsService.fetch)
       yield put({ type: 'save', payload: { ..._.get(res, ['data', 'data']) } });
     },
   },

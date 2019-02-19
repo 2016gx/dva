@@ -1,7 +1,7 @@
 import request from '../utils/request';
 
-const query = function () {
+const fetch = function () {
   return request('/api/examinations');
 }
 
-export default { query }
+export default { fetch }

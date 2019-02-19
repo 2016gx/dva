@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'dva';
 // import fetch from 'dva/fetch';
 
-class SubjectList extends React.Component {
+class SubjectsList extends React.Component {
 
   componentDidMount () {
     const { dispatch } = this.props
@@ -27,7 +27,7 @@ class SubjectList extends React.Component {
   }
 }
 
-SubjectList.propTypes = {
+SubjectsList.propTypes = {
 };
 
 const mapStateToProps = state =>{
@@ -38,4 +38,4 @@ const mapStateToProps = state =>{
   }
 }
 
-export default connect(mapStateToProps)(SubjectList);
+export default connect(mapStateToProps)(SubjectsList);

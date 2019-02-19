@@ -9,7 +9,7 @@ export default {
 
   effects: {
     *fetch({ payload }, { call, put }) {  // eslint-disable-line
-      const res = yield call(ExaminationsService.query)
+      const res = yield call(ExaminationsService.fetch)
       yield put({ type: 'save', payload: { ..._.get(res, ['data', 'data']) } });
     },
   },
