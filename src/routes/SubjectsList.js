@@ -7,7 +7,8 @@ class SubjectsList extends React.Component {
   componentDidMount () {
     const { dispatch } = this.props
     dispatch({
-      type: 'examinations/fetch'
+      type: 'examinations/fetch',
+      payload: { a: 1 }
     })
     dispatch({
       type: 'subjects/fetch'

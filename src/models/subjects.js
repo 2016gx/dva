@@ -8,8 +8,7 @@ export default {
   state: [],
 
   subscriptions: {
-    setup({ history, dispatch }, done) {
-      done('error message')
+    setup({ history }) {
       return history.listen(() => {
         console.log('location changed')
       });

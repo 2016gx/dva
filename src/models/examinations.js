@@ -9,6 +9,7 @@ export default {
 
   effects: {
     *fetch({ payload }, { call, put }) {  // eslint-disable-line
+      console.log('payload', payload)
       const res = yield call(ExaminationsService.fetch)
       yield put({ type: 'save', payload: { ..._.get(res, ['data', 'data']) } });
     },
@@ -19,4 +20,16 @@ export default {
       return { ...state, ...action.payload };
     },
   },
+
+  subscriptions: {
+    setup({ dispatch, history }) {
+      return history.listen(( { pathname } ) => {
+        if (pathname === '/examinations') {
+          dispatch({
+            type: 'fetch'
+          })
+        }
+      });
+    },
+  }
 }

@@ -6,10 +6,10 @@ import Loading from '../components/loading'
 class ExaminationsList extends React.Component {
 
   componentDidMount () {
-    const { dispatch } = this.props
-    dispatch({
-      type: 'examinations/fetch'
-    })
+    // const { dispatch } = this.props
+    // dispatch({
+    //   type: 'examinations/fetch'
+    // })
   }
 
   generateExamSpans = props => {
