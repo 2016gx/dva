@@ -16,9 +16,13 @@ export default {
   },
 
   effects: {
-    *fetch({ payload }, { call, put }) {  // eslint-disable-line
+    *fetch({ payload }, { call, put, select }) {  // eslint-disable-line
       const res = yield call(SubjectsService.fetch)
+      // const xxx = yield select(state => state.xxx)
       yield put({ type: 'save', payload: { ..._.get(res, ['data', 'data']) } });
+      // yield put({
+      //   type: 'examinations/fetch'
+      // })
     },
   },
 

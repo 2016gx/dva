@@ -8,7 +8,8 @@ class ExaminationsList extends React.Component {
   componentDidMount () {
     // const { dispatch } = this.props
     // dispatch({
-    //   type: 'examinations/fetch'
+    //   type: 'examinations/save',
+    //   payload: [{ id: 1000, name: '测试' }]
     // })
   }
 
@@ -19,8 +20,9 @@ class ExaminationsList extends React.Component {
 
   render () {
     const { loading } = this.props
+    console.log('loading', loading)
     return (
-      loading ? <Loading /> : this.generateExamSpans(this.props)
+      loading.global ? <Loading /> : this.generateExamSpans(this.props)
     )
   }
 }
@@ -30,7 +32,7 @@ ExaminationsList.propTypes = {
 
 const mapStateToProps = state => {
   return {
-    loading: state.loading.global,
+    loading: state.loading,
     examinations: state.examinations
   }
 }
